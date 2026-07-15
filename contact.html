@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>تماس با ما | Smart Idea</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --accent:#e46f1f;
+  --bg:#fafafa;
+  --text:#111;
+  --muted:#777;
+  --border:#ddd;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+body{
+  font-family:'Vazirmatn', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  padding-bottom:70px;
+}
+
+.container{
+  padding:20px;
+}
+
+/* Header */
+header{
+  text-align:center;
+  margin-bottom:32px;
+}
+header img{
+  width:120px;
+  max-width:100%;
+  margin-bottom:16px;
+}
+header h1{
+  font-size:1.2rem;
+  font-weight:600;
+}
+header h1 span{
+  display:block;
+  font-family:'Playfair Display', serif;
+  font-size:0.85rem;
+  font-weight:400;
+  color:#999;
+  margin-top:6px;
+  letter-spacing:1px;
+}
+header p{
+  font-size:0.9rem;
+  color:var(--muted);
+  margin-top:8px;
+  max-width:320px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* Info */
+.info p{
+  font-size:0.95rem;
+  margin-bottom:10px;
+}
+
+/* Lead Form */
+.lead{
+  border-top:1px solid var(--border);
+  padding-top:24px;
+  margin:24px 0;
+}
+.lead p{
+  font-size:0.9rem;
+  margin-bottom:10px;
+}
+.lead input, .lead textarea{
+  width:100%;
+  padding:10px;
+  font-size:0.9rem;
+  border:1px solid var(--border);
+  background:transparent;
+  margin-bottom:10px;
+  border-radius:4px;
+}
+.lead textarea{
+  resize:none;
+  height:100px;
+}
+.lead button{
+  width:100%;
+  padding:12px;
+  border:none;
+  background:var(--accent);
+  color:#fff;
+  font-size:0.9rem;
+  cursor:pointer;
+  border-radius:4px;
+}
+
+/* Social */
+.social{
+  display:flex;
+  gap:16px;
+  margin:20px 0;
+}
+.social a img{
+  width:32px;
+  height:32px;
+  display:block;
+}
+
+/* Bottom Nav */
+.bottom-nav{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#fff;
+  border-top:1px solid var(--border);
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  height:60px;
+  z-index:1000;
+}
+.bottom-nav a{
+  text-decoration:none;
+  color:#222;
+  font-size:0.7rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+}
+.bottom-nav svg{
+  width:20px;
+  height:20px;
+  stroke:var(--accent);
+  fill:none;
+  stroke-width:1.6;
+}
+
+/* Footer */
+.footer{
+  margin-top:40px;
+  padding:30px 10px 10px;
+  text-align:center;
+  color:#888;
+  font-size:0.75rem;
+}
+.footer .brand{
+  font-size:0.85rem;
+  font-weight:500;
+  color:#666;
+  margin-bottom:6px;
+}
+.footer .desc{
+  font-size:0.75rem;
+  line-height:1.8;
+  color:#999;
+  max-width:320px;
+  margin:0 auto 10px;
+}
+.footer .copy{
+  font-size:0.7rem;
+  color:#aaa;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+  <img src="images/logo.png" alt="Smart Idea Logo">
+  <h1>گروه طراحی و مهندسی ایده هوشمند
+    <span>Smart Idea | Design & Engineering Group</span>
+  </h1>
+  <p>خلق فضاهای بی‌نظیر ، با نگاه خلاقانه ، طراحی ماندگار ، برای زندگی امروز</p>
+</header>
+
+<section class="info">
+  <p>آدرس: تهران، خیابان نمونه، پلاک ۱۲، واحد ۳</p>
+  <p>تلفن تماس: 0912 000 0000</p>
+</section>
+
+<section class="lead">
+  <p>برای دریافت مشاوره، شماره موبایل و پیام خود را ثبت کنید</p>
+  <input type="tel" placeholder="شماره موبایل" required>
+  <textarea placeholder="پیام شما" required></textarea>
+  <button>ثبت</button>
+</section>
+
+<section class="social">
+  <a href="https://instagram.com/YOUR_USERNAME" target="_blank">
+    <img src="images/instagram-logo.png" alt="Instagram">
+  </a>
+  <a href="https://wa.me/989120000000" target="_blank">
+    <img src="images/whatsapp-logo.png" alt="WhatsApp">
+  </a>
+  <a href="https://t.me/YOUR_USERNAME" target="_blank">
+    <img src="images/telegram-logo.png" alt="Telegram">
+  </a>
+</section>
+
+</div>
+
+<nav class="bottom-nav">
+  <a href="indexmobile.html">
+    <svg viewBox="0 0 24 24"><path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2h-4v-6h-6v6H5a2 2 0 0 1-2-2z"/></svg>
+    خانه
+  </a>
+  <a href="gallery.html">
+    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+    پروژه‌ها
+  </a>
+  <a href="about.html">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg>
+    درباره
+  </a>
+</nav>
+
+<footer class="footer">
+  <p class="brand">Smart Idea | ایده هوشمند</p>
+  <p class="desc">تهران شهرک صنعتی کارآفرینان جاجرود - 02188842064</p>
+  <p class="copy">© 2026 Smart Idea. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

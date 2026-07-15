@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>پروژه‌ها | Smart Idea</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --bg:#fafafa;
+  --text:#111;
+  --muted:#888;
+  --accent:#f57c00;
+  --border:#e5e5e5;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  padding-bottom:70px;
+}
+
+/* ===== Header ===== */
+header{
+  padding:24px 20px 10px;
+}
+
+header h1{
+  font-size:1.2rem;
+  font-weight:500;
+}
+
+header span{
+  display:block;
+  font-size:.8rem;
+  color:var(--muted);
+  margin-top:4px;
+}
+
+header p{
+  margin-top:10px;
+  font-size:.85rem;
+  color:var(--muted);
+  line-height:1.8;
+}
+
+/* ===== Filter ===== */
+.filters{
+  display:flex;
+  gap:10px;
+  padding:14px 20px;
+  overflow-x:auto;
+}
+
+.filters button{
+  border:1px solid var(--border);
+  background:#fff;
+  padding:6px 14px;
+  font-size:.75rem;
+  border-radius:20px;
+  cursor:pointer;
+  white-space:nowrap;
+}
+
+.filters button.active{
+  border-color:var(--accent);
+  color:var(--accent);
+}
+
+/* ===== Projects Grid ===== */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:6px;
+  padding:10px;
+}
+
+.project{
+  position:relative;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  background:#eee;
+}
+
+.project img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.project .info{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.55),transparent 55%);
+  display:flex;
+  align-items:flex-end;
+  padding:10px;
+}
+
+.project .info div{
+  color:#fff;
+  font-size:.7rem;
+  line-height:1.5;
+}
+
+/* ===== CTA ===== */
+.cta{
+  margin:50px 20px 30px;
+  padding-top:30px;
+  border-top:1px solid var(--border);
+  text-align:center;
+}
+
+.cta p{
+  font-size:.9rem;
+  color:var(--muted);
+  margin-bottom:16px;
+}
+
+.cta a{
+  display:inline-block;
+  padding:10px 22px;
+  border:1px solid var(--accent);
+  color:#fff;
+  background:var(--accent);
+  text-decoration:none;
+  font-size:.85rem;
+}
+
+/* ===== Bottom Nav ===== */
+.bottom-nav{
+  position:fixed;
+  bottom:0; left:0; right:0;
+  height:60px;
+  background:#fff;
+  border-top:1px solid var(--border);
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+
+.bottom-nav a{
+  font-size:.7rem;
+  color:#444;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>پروژه‌ها
+    <span>Selected Projects</span>
+  </h1>
+  <p>
+    هر پروژه برای ما یک ایده تازه است؛  
+    ترکیبی از خلاقیت، مهندسی و احترام به زمان و سلیقه کارفرما.
+  </p>
+</header>
+
+<!-- Filters -->
+<div class="filters">
+  <button class="active">همه</button>
+  <button>مسکونی</button>
+  <button>اداری</button>
+  <button>فروشگاهی</button>
+  <button>نمایشگاهی</button>
+</div>
+
+<!-- Projects -->
+<section class="projects">
+
+  <div class="project">
+    <img src="images/project1.jpg">
+    <div class="info">
+      <div>
+        پروژه مسکونی نیاوران<br>
+        ۱۴۰۲
+      </div>
+    </div>
+  </div>
+
+  <div class="project">
+    <img src="images/project2.jpg">
+    <div class="info">
+      <div>
+        دفتر اداری ولنجک<br>
+        ۱۴۰۱
+      </div>
+    </div>
+  </div>
+
+  <div class="project">
+    <img src="images/project3.jpg">
+    <div class="info">
+      <div>
+        فروشگاه برندینگ<br>
+        ۱۴۰۳
+      </div>
+    </div>
+  </div>
+
+  <div class="project">
+    <img src="images/project4.jpg">
+    <div class="info">
+      <div>
+        غرفه نمایشگاهی<br>
+        ۱۴۰۲
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <p>پروژه بعدی می‌تواند فضای شما باشد.</p>
+  <a href="contact.html">دریافت مشاوره</a>
+</div>
+
+<!-- Bottom Nav -->
+<nav class="bottom-nav">
+  <a href="indexmobile.html">خانه</a>
+  <a href="projects.html">پروژه‌ها</a>
+  <a href="about.html">درباره</a>
+  <a href="contact.html">تماس</a>
+</nav>
+
+</body>
+</html>

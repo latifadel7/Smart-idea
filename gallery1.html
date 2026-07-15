@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>دکوراسیون داخلی | Smart Idea</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --accent:#f57c00;
+  --bg:#fafafa;
+  --text:#111;
+  --muted:#777;
+  --border:#e5e5e5;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  padding-bottom:70px;
+}
+
+/* ===== Top ===== */
+.topbar{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 16px;
+  border-bottom:1px solid var(--border);
+  background:#fff;
+}
+
+.logo{
+  width:50px;
+  height:50px;
+  object-fit:cover;
+}
+
+.title h1{
+  font-size:1.05rem;
+  font-weight:500;
+}
+
+.title span{
+  font-size:.75rem;
+  color:var(--muted);
+  margin-right:6px;
+}
+
+/* ===== Gallery ===== */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:3px;
+}
+
+.item{
+  aspect-ratio:1080/1350; /* عمودی اینستاگرامی */
+  overflow:hidden;
+  background:#eee;
+  position:relative;
+}
+
+.item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  cursor:pointer;
+}
+
+/* ===== Lightbox ===== */
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.92);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s;
+  z-index:9999;
+}
+
+.lightbox.active{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.lightbox-content{
+  position:relative;
+  transform:scale(.96);
+  opacity:0;
+  transition:.25s ease;
+}
+
+.lightbox.active .lightbox-content{
+  transform:scale(1);
+  opacity:1;
+}
+
+.lightbox img{
+  max-width:92vw;
+  max-height:92vh;
+  display:block;
+}
+
+/* Watermark */
+.watermark{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+}
+
+.watermark::after{
+  content:"Smart IDEA   Smart IDEA   Smart IDEA   Smart IDEA";
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  color:rgba(255,255,255,0.08);
+  font-size:16px;
+  transform:rotate(-20deg);
+  text-align:center;
+  white-space:pre-wrap;
+}
+
+/* ===== Bottom Nav ===== */
+.bottom-nav{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#fff;
+  border-top:1px solid var(--border);
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  height:60px;
+  z-index:1000;
+}
+
+.bottom-nav a{
+  text-decoration:none;
+  color:#333;
+  font-size:.7rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:5px;
+}
+
+.bottom-nav svg{
+  width:20px;
+  height:20px;
+  stroke:var(--accent);
+  fill:none;
+  stroke-width:1.6;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Top -->
+<div class="topbar">
+  <img src="images/logo.png" class="logo">
+  <div class="title">
+    <h1>دکوراسیون داخلی <span>Interior Design</span></h1>
+  </div>
+</div>
+
+<!-- Gallery -->
+<section class="gallery">
+  <!-- 12 تصویر نمونه عمودی -->
+  <div class="item"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1080&h=1350&fit=crop"></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=1080&h=1350&fit=crop"></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?w=1080&h=1350&fit=crop"></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?w=1080&h=1350&fit=crop"></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=1080&h=1350&fit=crop"></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1080&h=1350&fit=crop"></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=1080&h=1350&fit=crop"></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1080&h=1350&fit=crop"></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?w=1080&h=1350&fit=crop"></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1080&h=1350&fit=crop"></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?w=1080&h=1350&fit=crop"></div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-content">
+    <img id="lightbox-img">
+    <div class="watermark"></div>
+  </div>
+</div>
+
+<!-- Bottom Nav -->
+<nav class="bottom-nav">
+  <a href="indexmobile.html">
+    <svg viewBox="0 0 24 24"><path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2h-4v-6h-6v6H5a2 2 0 0 1-2-2z"/></svg>
+    خانه
+  </a>
+  <a href="#"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>پروژه‌ها</a>
+  <a href="#"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg>درباره</a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67 A2 2 0 0 1 4.11 2h3 a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91 a16 16 0 0 0 6 6l1.27-1.27 a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 A2 2 0 0 1 22 16.92z"/></svg>تماس</a>
+  <a href="https://instagram.com" target="_blank"><svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4z"/></svg>دایرکت</a>
+</nav>
+
+<script>
+const images = document.querySelectorAll('.gallery .item img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+let currentIndex = 0;
+
+images.forEach((img,i)=>{
+  img.addEventListener('click',()=>{
+    currentIndex=i;
+    openLightbox();
+  });
+});
+
+function openLightbox(){
+  lightboxImg.src = images[currentIndex].src;
+  lightbox.classList.add('active');
+  document.body.style.overflow='hidden';
+}
+
+function closeLightbox(){
+  lightbox.classList.remove('active');
+  document.body.style.overflow='';
+}
+
+lightbox.addEventListener('click', closeLightbox);
+
+// Swipe
+let startX=0;
+lightbox.addEventListener('touchstart', e=>{ startX=e.touches[0].clientX; });
+lightbox.addEventListener('touchend', e=>{
+  let endX=e.changedTouches[0].clientX;
+  if(endX-startX>50 && currentIndex>0){currentIndex--;openLightbox();}
+  if(startX-endX>50 && currentIndex<images.length-1){currentIndex++;openLightbox();}
+});
+</script>
+
+</body>
+</html>

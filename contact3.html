@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>تماس با ما | Smart Idea</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --accent:#f57c00;
+  --bg:#fafafa;
+  --text:#111;
+  --muted:#777;
+  --border:#e5e5e5;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  padding-bottom:70px;
+}
+
+.container{
+  padding:20px;
+}
+
+/* Header */
+header{
+  margin-bottom:32px;
+}
+
+header h1{
+  font-size:1.4rem;
+  font-weight:500;
+}
+
+header span{
+  font-size:.85rem;
+  color:var(--muted);
+  margin-right:6px;
+}
+
+/* Info */
+.info{
+  margin-bottom:36px;
+}
+
+.info p{
+  font-size:.95rem;
+  margin-bottom:10px;
+}
+
+/* Lead */
+.lead{
+  border-top:1px solid var(--border);
+  padding-top:24px;
+  margin-bottom:36px;
+}
+
+.lead p{
+  font-size:.9rem;
+  margin-bottom:10px;
+}
+
+.lead input{
+  width:100%;
+  padding:12px;
+  font-size:.9rem;
+  border:1px solid var(--border);
+  background:transparent;
+  margin-bottom:10px;
+}
+
+.lead button{
+  width:100%;
+  padding:12px;
+  border:none;
+  background:var(--accent);
+  color:#fff;
+  font-size:.9rem;
+  cursor:pointer;
+}
+
+/* Social */
+.social{
+  display:flex;
+  gap:20px;
+  margin-bottom:20px;
+}
+
+.social a{
+  display:inline-flex;
+  width:32px;
+  height:32px;
+}
+
+/* Bottom Nav */
+.bottom-nav{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#fff;
+  border-top:1px solid var(--border);
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  height:60px;
+}
+
+.bottom-nav a{
+  text-decoration:none;
+  color:#333;
+  font-size:.7rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+}
+
+.bottom-nav svg{
+  width:20px;
+  height:20px;
+  stroke:var(--accent);
+  fill:none;
+  stroke-width:1.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+  <h1>تماس با ما <span>Contact</span></h1>
+</header>
+
+<section class="info">
+  <p>آدرس: تهران، خیابان نمونه، پلاک ۱۲، واحد ۳</p>
+  <p>تلفن تماس: 0912 000 0000</p>
+</section>
+
+<section class="lead">
+  <p>برای دریافت مشاوره، شماره موبایل خود را ثبت کنید</p>
+  <input type="tel" placeholder="شماره موبایل">
+  <button>ثبت شماره</button>
+</section>
+
+<section class="social">
+
+  <!-- Instagram -->
+  <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+    <svg viewBox="0 0 24 24">
+      <defs>
+        <linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#f09433"/>
+          <stop offset="25%" stop-color="#e6683c"/>
+          <stop offset="50%" stop-color="#dc2743"/>
+          <stop offset="75%" stop-color="#cc2366"/>
+          <stop offset="100%" stop-color="#bc1888"/>
+        </linearGradient>
+      </defs>
+      <path fill="url(#ig)" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z"/>
+      <circle cx="12" cy="12" r="3" fill="#fff"/>
+      <circle cx="17.5" cy="6.5" r="1" fill="#fff"/>
+    </svg>
+  </a>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/989120000000" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path fill="#25D366" d="M20.5 3.5A11 11 0 0 0 3.6 18.8L2 22l3.3-1.5A11 11 0 1 0 20.5 3.5z"/>
+      <path fill="#fff" d="M8.5 7.5c.3-.7.6-.7.9-.7h.8c.2 0 .5.1.6.4.2.3.7 1.7.7 1.7.1.2.1.4 0 .6-.1.2-.2.3-.3.4-.1.1-.3.3-.4.4-.1.1-.2.3-.1.5.1.2.5.9 1.1 1.5.8.8 1.5 1.1 1.7 1.2.2.1.4.1.5 0 .2-.2.6-.7.7-.9.2-.2.3-.2.5-.1.2.1 1.3.6 1.5.7.2.1.4.2.4.3 0 .1 0 .8-.3 1.6-.3.8-1.6 1.4-2.2 1.5-.6.1-1.3.2-3-.4-2.1-.7-3.4-2.4-3.5-2.5-.1-.1-1.3-1.8-1.3-3.4 0-1.6.8-2.4 1.1-2.7z"/>
+    </svg>
+  </a>
+
+  <!-- Telegram -->
+  <a href="https://t.me/username" target="_blank" aria-label="Telegram">
+    <svg viewBox="0 0 24 24">
+      <path fill="#0088cc" d="M22 2L2 11l5 2 2 6 4-4 5 4z"/>
+    </svg>
+  </a>
+
+</section>
+
+</div>
+
+<nav class="bottom-nav">
+  <a href="indexmobile.html">
+    <svg viewBox="0 0 24 24"><path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2h-4v-6h-6v6H5a2 2 0 0 1-2-2z"/></svg>
+    خانه
+  </a>
+  <a href="gallery.html">
+    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+    پروژه‌ها
+  </a>
+  <a href="about.html">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg>
+    درباره
+  </a>
+</nav>
+
+</body>
+</html>

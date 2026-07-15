@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>درباره ما | Smart Idea</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --accent:#f57c00;
+  --bg:#fafafa;
+  --text:#111;
+  --muted:#777;
+  --border:#e5e5e5;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  padding-bottom:70px;
+  line-height:1.9;
+}
+.topbar{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 16px;
+  border-bottom:1px solid var(--border);
+  background:#fff;
+}
+.logo{width:42px;height:42px;object-fit:cover}
+.title h1{font-size:1.05rem;font-weight:500}
+.title span{font-size:.75rem;color:var(--muted);margin-right:6px}
+
+.content{
+  padding:26px 18px;
+}
+.content h2{
+  font-size:1rem;
+  font-weight:500;
+  margin-bottom:14px;
+}
+.content p{
+  font-size:.88rem;
+  color:#333;
+  margin-bottom:16px;
+}
+.highlight{
+  border-right:2px solid var(--accent);
+  padding-right:12px;
+  color:#222;
+}
+
+.bottom-nav{
+  position:fixed;
+  bottom:0;left:0;right:0;
+  background:#fff;
+  border-top:1px solid var(--border);
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  height:60px;
+}
+.bottom-nav a{
+  text-decoration:none;
+  color:#333;
+  font-size:.7rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:5px;
+}
+.bottom-nav svg{
+  width:20px;height:20px;
+  stroke:var(--accent);
+  fill:none;
+  stroke-width:1.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <img src="images/logo.png" class="logo">
+  <div class="title">
+    <h1>درباره ما <span>About Smart Idea</span></h1>
+  </div>
+</div>
+
+<section class="content">
+  <h2>فلسفه ما</h2>
+  <p class="highlight">
+    در «ایده هوشمند»، طراحی فقط ساخت فضا نیست؛  
+    خلق تجربه‌ای‌ست که با سبک زندگی، هویت و نگاه هنری شما هم‌مسیر می‌شود.
+  </p>
+
+  <p>
+    ما با تکیه بر خلاقیت، ایده‌پردازی و درک عمیق از فضا،  
+    پروژه‌هایی را طراحی می‌کنیم که هم زیبا هستند  
+    و هم در طول زمان، کیفیت و کارایی خود را حفظ می‌کنند.
+  </p>
+
+  <h2>تعهد ما</h2>
+  <p>
+    ✔ تعهد کامل به زمان‌بندی پروژه  
+    <br>✔ قیمت‌گذاری منصفانه و رقابتی  
+    <br>✔ تمرکز بر حداکثر کیفیت در اجرا  
+    <br>✔ احترام واقعی به زمان و سرمایه‌ی مشتری
+  </p>
+
+  <h2>تجربه و تخصص</h2>
+  <p>
+    با بیش از <strong>۱۵ سال تجربه حرفه‌ای</strong> در طراحی و اجرای پروژه‌های مسکونی، اداری و تجاری  
+    و با همراهی تیمی متخصص و متعهد،  
+    هر پروژه برای ما یک اثر منحصر‌به‌فرد است.
+  </p>
+</section>
+
+<nav class="bottom-nav">
+  <a href="indexmobile.html">
+    <svg viewBox="0 0 24 24"><path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2h-4v-6h-6v6H5a2 2 0 0 1-2-2z"/></svg>
+    خانه
+  </a>
+  <a href="gallery.html">
+    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+    پروژه‌ها
+  </a>
+  <a href="contact.html">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg>
+    تماس
+  </a>
+  <a href="https://instagram.com" target="_blank">
+    <svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4z"/></svg>
+    دایرکت
+  </a>
+</nav>
+
+</body>
+</html>
